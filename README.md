@@ -63,7 +63,7 @@ const App = () => {
 
 The app encloses everything within a NavigationContainer. Then it defines the main screens (pages) of the app: **ResultsShowScreen** and **SearchScreen**.
 
-This screens are available as stack screens, meaning that are available one on top of the other, and the way to navigate to one another is by the use of a button, or a TouchableOpacity, in order to issue a navigation action.
+This screens are available as stack screens, meaning that they are available one on top of the other, and the way to navigate to one another is by the use of a button, or a TouchableOpacity, in order to issue a navigation action.
 
 The initial screen showed when launching the app is Search (`initialRouteName={"Search"}`)
 
