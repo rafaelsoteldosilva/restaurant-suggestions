@@ -62,7 +62,7 @@ const App = () => {
 };
 ```
 
-The app defines encloses everything within a NavigationContainer. Then it defines the main screens (pages) of the app: **ResultsShowScreen** and **SearchScreen**.
+The app encloses everything within a NavigationContainer. Then it defines the main screens (pages) of the app: **ResultsShowScreen** and **SearchScreen**.
 
 This screens are available as stack screens, meaning that are available one on top of the other, and the way to navigate to one another is by the use of a button, or a TouchableOpacity, in order to issue a navigation action.
 
@@ -292,13 +292,13 @@ else
 
 The reason for having a `ListHeaderComponent` and a `ListFooterComponent` inside a FlatList, to show what's before and after such FlatList, and not a `ScrollView` with elements and the FlatList inside of it, is to avoid a warning telling that "VirtualizedLists should never be nested inside plain ScrollViews.".
 
-## **rootNavigation.js and the hook useResults.js**
+## **rootNavigation.js, the hook useResults.js and yelp.js**
 
 ## <ins>src/helpers/rootnavigation.js</ins>
 
 In order to ease the navigation between screens, we attach a ref variable to the navigationContainer in `App.js: <NavigationContainer ref={navigationRef}>`
 
-Now, in `rootNavigation.js` we export navigate function from this ref:
+Now, in `rootNavigation.js` we export a navigate function from this ref:
 
 ```jsx
 // src/helpers/rootnavigation.js
@@ -324,7 +324,7 @@ And use it later like in `resultsList.js`:
 
 ## <ins>src/hooks/useResults.js</ins>
 
-When `SearchScreen.js` need to load from the yelp Api, it uses `useresults.js`:
+When `SearchScreen.js` needs to load from the yelp Api, it uses `useResults.js`:
 
 ```jsx
 // src/screens/SearchScreen.js
@@ -386,3 +386,18 @@ useEffect(() => {
    searchApi("pasta");
 }, []);
 ```
+
+## <ins>src/api/yelp.js</ins>
+
+It is in charge of creating the axios instance, and also of the configuration of the headers.
+
+```jsx
+export default axios.create({
+   baseURL: "https://api.yelp.com/v3/businesses",
+   headers: {
+      Authorization: `Bearer ${YELP_AUTH}`,
+   },
+});
+```
+
+I use the .env file to keep the yelp authorization key.
