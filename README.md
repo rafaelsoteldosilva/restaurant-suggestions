@@ -13,9 +13,8 @@ Main technologies used: React, React Native, React Native Navigation, Expo, Cons
 <a href="https://www.youtube.com/shorts/e75IzpoNlB0" target="_blank">
 <img src="./imagesForReadme/food-suggestions.jpg" />
 </a>
-<!-- [<img src="./imagesForReadme/food-suggestions.jpg">](https://www.youtube.com/shorts/e75IzpoNlB0) -->
 
-Please, click the image for a short video on YouTube of this app
+Please, click the image to watch a short video of this app on YouTube
 
 ---
 
@@ -401,3 +400,28 @@ export default axios.create({
 ```
 
 I use the .env file to keep the yelp authorization key.
+
+After installing react-native-dotenv, I have to place the plugin the `babel.config.js` file:
+
+```jsx
+module.exports = function (api) {
+   api.cache(true);  <=== It ensures that the configuration is cached, so that it is not called every time
+                          the app is started.
+   return {
+      presets: ["babel-preset-expo"],
+      plugins: [
+         [
+            "module:react-native-dotenv",
+            {
+               moduleName: "@env",
+               path: ".env",
+               blacklist: null,
+               whitelist: null,
+               safe: false,
+               allowUndefined: true,
+            },
+         ],
+      ],
+   };
+};
+```
