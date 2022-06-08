@@ -1,4 +1,4 @@
-# **Food suggestions in Santiago**
+# **Restaurant suggestions in Santiago**
 
 Date: octuber 2021
 
@@ -233,6 +233,8 @@ It shows:
    </View>
 </View>
 ```
+
+StarRating was imported from the "react-native-star-rating" library https://www.npmjs.com/package/react-native-star-rating
 
 The user can scroll through the lists of restaurants within each category, or click on one of the images to enter `ResultsShowScreen.js`, which is invoked through a `TouchableOpacity` that encloses the call to `ResultsDetail.js`.
 
