@@ -123,6 +123,16 @@ The initial screen showed when launching the app is Search (`initialRouteName={"
 </View>
 ```
 
+filterResultsByPrice is a helper function that filters the reult set according to the price level, $, $$ or $$$$, which correspond to cost-effective, bit pricier and big spender respectively.
+
+```jsx
+const filterResultsByPrice = (price) => {
+   return results.filter((result) => {
+      return result.price === price;
+   });
+};
+```
+
 This screen shows the suggestions for restaurants that offer the food preference of the user.
 
 The user can enter his/her preference in the search bar ![image](./imagesForReadme/SearchBar.jpg) located at the top of the screen.
