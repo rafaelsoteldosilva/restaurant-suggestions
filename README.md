@@ -167,7 +167,7 @@ each one is shown as:
 
 ## <ins>src/components/ResultsList.js</ins>
 
-It is in charge of showing an horizontal list of restaurant suggestions,
+It is in charge of showing an horizontal list of restaurant suggestions, for example:
 
 ![image](./imagesForReadme/ResultsList.jpg)
 
