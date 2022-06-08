@@ -22,6 +22,8 @@ This app was developed to be used in any mobile device.
 
 Given a food preference from the user, it shows real suggestions (using the fusion yelp api https://fusion.yelp.com/) of restaurants that offer the preference.
 
+The suggestions will be shown under three categories: cost-effective, bit pricier and big spender.
+
 Each category will show the number of real locations found, the name of the restaurant, the rating, and the number of reviews fouund for the restaurant.
 
 ## **Project Structure**
