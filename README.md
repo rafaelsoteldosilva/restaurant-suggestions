@@ -211,7 +211,7 @@ It is in charge of showing an horizontal list of restaurant suggestions, for exa
 It shows:
 
 -  The number of locations found in yelp, for this category, and for the search text (user preference),
--  And, for every location found in the result set from yelp (using `src/components/ResultsDetail.js`):
+-  And, for every location found in the result set from yelp:
 
    -- An image provided by the restaurant to yelp,
 
