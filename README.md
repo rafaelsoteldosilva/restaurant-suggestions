@@ -123,7 +123,7 @@ The initial screen showed when launching the app is Search (`initialRouteName={"
 </View>
 ```
 
-filterResultsByPrice is a helper function that filters the reult set according to the price level, $, $$ or $$$$, which correspond to cost-effective, bit pricier and big spender respectively.
+filterResultsByPrice is a helper function that filters the result set (that was obtained making a request to the yelp api) according to the price level, $, $$ or $$$$, which correspond to cost-effective, bit pricier and big spender respectively.
 
 ```jsx
 const filterResultsByPrice = (price) => {
