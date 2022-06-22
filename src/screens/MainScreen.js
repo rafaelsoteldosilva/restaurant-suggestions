@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, Text, ScrollView, StyleSheet, SafeAreaView } from "react-native";
 import { SearchBar } from "react-native-elements";
 
 import useResults from "../hooks/useResults";
-import ResultsList from "../components/ResultsList";
+import ShowABusinessStripe from "../components/ShowABuisinessStripe";
 
-const SearchScreen = () => {
+const MainScreen = () => {
    const [term, setTerm] = useState("");
    const [searchApi, results, errorMessage] = useResults();
 
@@ -16,10 +16,11 @@ const SearchScreen = () => {
    };
 
    return (
-      <View style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1 }}>
          <SearchBar
-            placeholder="Type your search..."
-            darkTheme
+            // round
+            placeholder="Type your preferred food type..."
+            darktheme
             onChangeText={setTerm}
             value={term}
             onEndEditing={() => searchApi(term)}
@@ -34,7 +35,8 @@ const SearchScreen = () => {
                   paddingBottom: 2,
                }}
             >
-               <ResultsList
+               <ShowABusinessStripe
+                  // This is the Cost Effective stripe
                   results={filterResultsByPrice("$")}
                   title="Cost Effective"
                />
@@ -47,7 +49,8 @@ const SearchScreen = () => {
                   paddingBottom: 2,
                }}
             >
-               <ResultsList
+               <ShowABusinessStripe
+                  // This is the Bit Pricier stripe
                   results={filterResultsByPrice("$$")}
                   title="Bit Pricier"
                />
@@ -57,15 +60,16 @@ const SearchScreen = () => {
                   marginTop: 5,
                }}
             >
-               <ResultsList
+               <ShowABusinessStripe
+                  // This is the Big Spender stripe
                   results={filterResultsByPrice("$$$$")}
                   title="Big Spender"
                />
             </View>
          </ScrollView>
-      </View>
+      </SafeAreaView>
    );
 };
 const styles = StyleSheet.create({});
 
-export default SearchScreen;
+export default MainScreen;

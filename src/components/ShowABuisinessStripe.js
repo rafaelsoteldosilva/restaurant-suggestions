@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import * as RootNavigation from "../helpers/rootNavigation";
 
-import ResultsDetail from "./ResultsDetail";
+import ShowABuisinessCard from "./ShowABuisinessCard";
 
 // {
 //   "total": 8228,
@@ -59,7 +59,7 @@ import ResultsDetail from "./ResultsDetail";
 //   }
 // }
 
-const ResultsList = ({ title, results, navigation }) => {
+const ShowABusinessStripe = ({ title, results, navigation }) => {
    if (!results.length) return null;
    else
       return (
@@ -79,12 +79,12 @@ const ResultsList = ({ title, results, navigation }) => {
                   return (
                      <TouchableOpacity
                         onPress={() =>
-                           RootNavigation.navigate("ResultsShow", {
+                           RootNavigation.navigate("ShowABusinessInfo", {
                               id: item.id,
                            })
                         }
                      >
-                        <ResultsDetail
+                        <ShowABuisinessCard
                            restName={item.name}
                            restImage={item.image_url}
                            restUrl={item.url}
@@ -106,4 +106,4 @@ const styles = StyleSheet.create({
    },
 });
 
-export default ResultsList;
+export default ShowABusinessStripe;

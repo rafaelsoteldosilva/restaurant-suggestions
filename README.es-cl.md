@@ -1,12 +1,12 @@
-[![es](https://img.shields.io/badge/lang-es-green.svg)](https://github.com/rafaelsoteldosilva/restaurants-suggestions/blob/main/README.es-cl.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/rafaelsoteldosilva/restaurants-suggestions/blob/main/README.md)
 
 # **Restaurant suggestions in Santiago**
 
-Date: octuber 2021
+Fecha de creación: octuber 2021
 
-Author: Rafael Soteldo
+Autor: Rafael Soteldo
 
-Main technologies used:
+Principales tecnologías usadas:
 
 -  React,
 -  React Native,
@@ -15,7 +15,7 @@ Main technologies used:
 -  Consuming Yelp Api,
 -  hooks
 
-Yelp is an american company that publishes `reviews` of sources as `Restaurants`, `Bars`, `Coffee & Tea`, `Nightlife`, etc. around the world
+Yelp es una compañía norte amercicana que publica `reviews` de fuentes como `Restaurants`, `Bars`, `Coffee & Tea`, `Nightlife`, etc. por todo el mundo
 
 ---
 
@@ -25,18 +25,18 @@ Yelp is an american company that publishes `reviews` of sources as `Restaurants`
 
 ---
 
-## **Installation guide**
+## **Guía de instalación**
 
--  `GIT Clone` the repo into your hard drive
--  `cd` into the created folder
--  Run `npm install` in order to install all dependencies
--  Get an API from yelp:
+-  Haga `GIT Clone` de este repo en su disco duro
+-  `cd` dentro del directorio creado
+-  Ejecute `npm install` para instalar todas las dependencias
+-  Obtenga un token de autorización de Yelp:
 
-   -  Go to `Yelp Fusion`
-   -  Click on `Explore Yelp Fusion`
-   -  `Sign Up` or `Login`
-   -  Click on `Manage App`
-   -  Copy the `API Key`
+   -  Vaya a `Yelp Fusion`
+   -  Haga click en `Explore Yelp Fusion`
+   -  `Sign Up` o `Login`
+   -  haga click en `Manage App`
+   -  Copie la `API Key`
    <p align="center">
       <img src="./imagesForReadme/yelp-fussion.jpg" width="700" alt="yelp-fussion"/>
       <img src="./imagesForReadme/login-or-signup.jpg"  width="700" alt="login-or-signup"/>
@@ -44,75 +44,75 @@ Yelp is an american company that publishes `reviews` of sources as `Restaurants`
       <img src="./imagesForReadme/api-key.jpg"  width="700" alt="api-key"/>
    </p>
 
--  Create an `.env` in the root folder
--  Paste the KEY into this file, giving it the name `YELP_AUTH`:
+-  Cree un archivo `.env` en el directorio raiz
+-  Pegue la CLAVE en este archivo, dándole el nombre de `YELP_AUTH`
 
 ```jsx
 // .env
 YELP_AUTH=kEkwpzpequ7OqfqPEJ9zIH6nSEpUiNQW8...
 ```
 
-Now, in order to be able to excecute the app in your device, you have to install `Expo` in it:
+Ahora, para poder ejecutar la app en su dispositivo, debe instalar `Expo` en él:
 
 <p align="center">
    <img src="./imagesForReadme/Expo_Google Play Store.jpg" width="300" alt="Expo_Google Play Store"/>
 </p>
 
-Once `Expo` was installed in your device, you can execute the app from `VS Code` or your favorite `IDE`, run `Expo Start`, wait for the following message:
+Una vez que `Expo` fue instalado en su dispositivo, debe ejecutar la app desde `VS COde` o su `IDE` favorito
 
 <p align="center">
    <img src="./imagesForReadme/Expo start.jpg" alt="Expo start"/>
 </p>
 
-You can scan the QR that's there, or, like me, go to the address `http://localhost:19002`:
+Usted puede escanear el código QR que está allí, or, como yo, vaya a `http://localhost:19002`:
 
 <p align="center">
    <img src="./imagesForReadme/localhost 19002.jpg" width="700" alt="localhost 19002"/>
 </p>
 
-Once there, `expo` gives you the possibility of running the app in a device emulator, if you want to continue with the phisical device, you can now scan the QR with `Expo` in your device
+Una vez allí, `Expo` le da la posibilidad de ejecutar la app en un emulador, si desea continuar con el dispositivo físico, puede ahora escanear el QR con `Expo` en su dispositivo
 
 <p align="center">
    <img src="./imagesForReadme/Expo Go.jpg" width="400" alt="Expo Go"/>
 </p>
 
-That´s how my dark theme looks, then press `Scan QR code`, and, there you go...
+Así es com o luce mi tema obscuro, entonces presione `Scan QR cede`, y, listo...
 
-You must be using the same wifi (from the computer and your device) in order for it to work, if you want to use your device company's data, you can use the `tunnel` feature located in `localhost:19002` (it takes a little longer to build, but it works ok. But you have to be careful, if you change the connection type, expo remains so configured, and if you go back, it'll fail. There must be a way to reconfigure expo, but in the meantime, uninstall and install expo again in your device is a solution)
+Debe estar usando la misma wifi (desde la computadora y su dispositivo) para que funcione, si quiere usar sus datos de la compañía telefónica, puede usar la opción `tunnel` que se encuentra en `localhost:19002` (toma un poco más de tiempo en construirse pero funciona. Pero debe tener cuidado, si cambia el tipo de conexión, `Expo` se queda configurado como tal, y si lo pone como antes, no funcionará. Debe haber una forma de reconfigurar `Expo`, pero mientras tanto, desinstalar y volver a instalar `Expo` es una solución)
 
-## **About the project**
+## **Sobre el proyecto**
 
-This app was developed to be used in any mobile device.
+Esta app fue desarrollada para que sea usada en cualquier dispositivo móvil.
 
-Given a food type preference from the user, it shows real suggestions in the city of Santiago de Chile (using the fusion yelp api https://fusion.yelp.com/).
+Dada una preferencia de tipo de comida, muestra sugerencias reales en la ciudad de santiago de Chile (mediante el uso de la Api Fussion de Yelp https://fusion.yelp.com/).
 
-These suggestions will be shown under three categories: cost-effective, bit pricier and big spender (three scrollable stripes).
+Estas sugerencias son mostradas en tres categprías: baratas (cost-effective), un poco más caras (Bit Pricier) y más caras (Big Spender) (Tres cintas escroleables)
 
 <p align="center">
    <img src="./imagesForReadme/food-suggestions-three-levels.jpg" width="400" alt="food-suggestions-three-levels"/>
 </p>
 
-Each category will show the number of real locations found, the rating of each locale, the number of `reviews` given by the users of each locale, and an image.
+Cada categría mostrará el número de locales reales encontrados, el rating de cada local, el número de `reviews` dados por los usuarios de cada local, y una imagen.
 
-## **Project Structure**
+## **Estructura del proyecto**
 
-The project structure is as follows:
+La estructura del proyecto es la siguiente
 
 <p align="center">
   <img src="./imagesForReadme/project-structure.jpg" alt="project-structure"/>
 </p>
 
-The folder that contains the most logic is **src**, with the following content:
+El directorio que contiene la mayor parte de la lógica es **src**, con el siguiente contenido:
 
--  **src/api/yelp.js**, contains the default `axios create`,
--  **src/components**, contains the components used by the actual screens,
--  **src/helpers/rootNavigation.js**, exposes the navigate functions, inserted to a `ref` by the NavigationContainer provider,
+-  **src/api/yelp.js**, contiene el `create de axios` por defecto,
+-  **src/components**, contiene los componentes usados por las pantallas reales,
+-  **src/helpers/rootNavigation.js**, expone las funciones de navegación, insertadas a un `ref`por el proveedor NavigationContainer,
 -  **src/hooks/useResults.js**
--  **src/screens**, contains the screens of the app, similar to pages in a bare `React` project,
+-  **src/screens**, contiene las pantallas de la app, similar a las páginas de un proyecto puro `React`,
 
-This document explains the constituent parts of the project, in the same order as they are presented in `VS Code` (see image above).
+Este documentos explica las partes constituyentes del proyecto, en el mismo orden en el que aparecen en `VS Code` (ver imagen de arriba)
 
-The main technologies used for this project were:
+Las principales tecnologías usadas por este proyecto son:
 
 -  React Native,
 -  React Native Elements,
@@ -120,11 +120,11 @@ The main technologies used for this project were:
 -  React Native Navigation,
 -  Expo
 
-### **The src folder**
+### **El directorio src**
 
-The **src** folder is the main folder of the project, since it contains almost all the functional files that make the entire app
+El directorio **src** es el principal directorio del proyecto, ya que contiene casi todos los archivos funcionales que hacen a la app entera.
 
-Its main subfolders are:
+Sus principales sub-directorios son:
 
 -  **api**
 -  **components**
@@ -134,7 +134,7 @@ Its main subfolders are:
 
 ### - **<ins>src/api/yelp.js</ins>**
 
-It is in charge of creating the axios instance, and also of the configuration of the headers of each request.
+Está a cargo de crear una instancia de axios, como también la configuración de los headers de cada request
 
 ```jsx
 export default axios.create({
@@ -145,23 +145,23 @@ export default axios.create({
 });
 ```
 
-Note that I use the `businesses` endpoint of the yelp api.
+Note que uso el endpoint `businesses` de la api yelp.
 
-We could also make queries from `Postman`, for example, if we wanted to know 8 restaurants, in the area of New York (NYC), we could do it as:
+Podríamos hacer consultas desde `Postman`, por ejemplo, si quisieramos obtener 8 restaurantes, en el área de New York City (NYC), podríamos hacer lo siguiente:
 
-1- Start building the query, and paste the YELP_AUTH that you've got from the yelp-fussion website:
+1- Comenzar a construir el query, y pegar el YELP_AUTH que usted obtuvo de la website yelp-fussion.
 
 <p align="center">
   <img src="./imagesForReadme/building-query-postman-1.jpg" alt="building-query-postman-1"/>
 </p>
 
-2- Then add the parameters:
+2- ahora añadir los parámetros:
 
 <p align="center">
   <img src="./imagesForReadme/building-query-postman-2.jpg" alt="building-query-postman-2"/>
 </p>
 
-3- Then click SEND, and the result would be:
+3- Ahora hacer click en SEND, el resultado sería:
 
 ```
 {
@@ -517,26 +517,26 @@ We could also make queries from `Postman`, for example, if we wanted to know 8 r
 }
 ```
 
-You see that for each of them you get things like:
+Ve que para cada uno de ellos obtiene cosas como:
 
--  The name
--  An image URL
--  The review count
--  The rating
--  The address
--  The price level
--  A phone number
+-  El nombre
+-  Una URL de imagen
+-  La cuenta de `reviews`
+-  El rating
+-  La dirección
+-  El nivel de precios
+-  Un número de teléfono
 -  etc.
 
-Remember that $, $$, $$$, $$$$ are the level of prices. In this app I only used $, $$, $$$$
+Recuerde que $, $$, $$$, $$$$ son niveles de precios. En ésta app yo sólo uso $, $$, $$$$.
 
 ## **components**
 
-Contains all the components used by the actual pages and other components.
+Contiene todos los componentes que se usan por la oáginas y otros componentes.
 
 ### - **<ins>src/components/ShowABusinessCard.js</ins>**
 
-For a given business, and having things like name, image, rating, etc., shows a little card of the business, several cards of the same type conform a `business stripe`
+Para un negocio dado, y teniendo cosas como nombre, imágen, rating, etc., muestra una pequeña carta de negocio, varias cartas de un mismo tipo conforman una `cinta de negocios`
 
 ```jsx
 // src/components/ShowABusinessCard.js
@@ -573,11 +573,11 @@ For a given business, and having things like name, image, rating, etc., shows a 
 
 ### - **<ins>src/components/ShowABusinessStripe.js</ins>**
 
-Shows a "Stripe" of the businesses found in the yelp api, for a given price level
+Muestra una "Cinta" de los negocios encontrados en la api yelp, para un nivel dado de precios.
 
-It traverses `results`, and for each business shows a business card, and the possibility to click on each, in order to navigate to `ShowABusinessInfo`
+El recorre `results`, y para cada uno de ellos, muestra una carta de negocio, con la posibilidad de hacer click a cualquiera de ellos, para navegar a `ShowABusinessInfo` y ver la info de ese negocio
 
-The variable `results` is the result of invoking the yelp api (see `SearchBar` inside `src/screens/MainScreen.js`)
+La variable `results` es el resultado de invocar la api yelp (see `SearchBar` inside `src/screens/MainScreen.js`)
 
 ```jsx
 // src/components/ShowABusinessStripe.js
@@ -620,13 +620,13 @@ The variable `results` is the result of invoking the yelp api (see `SearchBar` i
   <img src="./imagesForReadme/A-Business-Stripe.jpg" width="400" alt="A-Business-Stripe"/>
 </p>
 
-You can scroll it from left to right and vice versa. That´s one of the advantages of `flatList`
+Puede hacer scroll de derecha a izquierda y viceversa. Esa es una de las ventajas del `flatlist`
 
 ## **helpers**
 
 ### - **<ins>src/helpers/rootNavigation.js</ins>**
 
-It delivers a `ref` that makes it easier to navigate to other screens
+Entrega un `ref` que facilita la navegación a otras pantallas
 
 ```jsx
 // src/helpers/rootNavigation.js
@@ -637,7 +637,7 @@ export function navigate(name, params) {
 }
 ```
 
-An example of this can be seen above:
+Un ejemplo de esto puede ser visto arriba:
 
 ```jsx
 // src/components/ShowABusinessStripe.js
@@ -651,9 +651,9 @@ An example of this can be seen above:
 
 ### - **<ins>src/hooks/useResults.js</ins>**
 
-It is a hook that make it easier the use of the yelp api
+Este es un hook que facilita el uso de la api yelp.
 
-It expones a `searchApi` which is a function that, given a search term like `salad`, completes the search in the yelp api:
+Expone un `searchApi` el cual es una función que, dado un término de búsqueda como `salad`, completa la búsqueda en la api yelp:
 
 ```jsx
 // src/hooks/useResults.js
@@ -676,23 +676,25 @@ const searchApi = async (searchTerm) => {
 };
 ```
 
-As you can see, it completes the query string with `/search`, and also completes `limit` and `location`
+La api yelp sólo acepta términos en inglés.
 
-(the maximum limit allowed by the yelp api is 50)
+Como puede ver, completa el query con `/search`, y también con `limit` y `location`
 
-For example, if we were to search for `salad`, the resulting `query` would be:
+(El límite máximo permitido por la api yelp es 50)
+
+Por ejemplo, si buscásemos `salad`, el query resultante sería:
 
 `https://api.yelp.com/v3/businesses/search?limit=50&searchterm=salad&location=santiago%20de%20chile`
 
-Then sets the results to the state variable `results`, now we can start by traversing it looking for the restaurants at certain price level, etc..
+Entonces setea el resultado en la variable de estado `results`, ahora podemos comenzar a recorrerlo para buscar restaurants con cierto nivel de precios
 
 ## **screens**
 
-It's were the actual screens reside
+Es donde residen las pantallas.
 
 ### - **<ins>src/screens/MainScreen.js</ins>**
 
-This is the main screen of the app, when we start the app, it shows:
+Esta es la pantalla principal de la app, cuando encendemos la app, muestra:
 
 ```jsx
 // src/screens/MainScreen.js
@@ -750,9 +752,9 @@ This is the main screen of the app, when we start the app, it shows:
 </SafeAreaView>
 ```
 
-By using `SafeAreaView` we ensure that if what we are showing on the screen of the device, it can be scrolled to see the rest.
+Mediante el uso de `SafeAreaView` aseguramos que lo que mostremos en la pantalla del dispositivo, pueda ser escroleado para ver el resto.
 
-The function `filterResultsByPrice` simply traverses the `search result` looking for certain price level, and returning the corresponding subset
+La función `filterResultsByPrice` simplemente recorre el `search result` buscando cierto nivel de precios, y retorna el subconjunto correspondiente:
 
 ```jsx
 // src/screens/MainScreen.js
@@ -765,13 +767,13 @@ const filterResultsByPrice = (price) => {
 ...
 ```
 
-`SearchBar` belongs to `React Native Elements`, and it displays and gives functionality to the search bar:
+`SearchBar` pertenece a `React Native Elements`, muestra y da funcionalidad a la barra de búsqueda:
 
 <p align="center">
   <img src="./imagesForReadme/SearchBar.jpg" alt="SearchBar"/>
 </p>
 
-In the case of the picture, the user typed `Salad`. The code for this `SearchBar` is:
+En el caso de la imagen, el usaurio escribió `salad`. El código para esta `SearchBar` es:
 
 ```jsx
 // src/screens/MainScreen.js
@@ -787,11 +789,11 @@ In the case of the picture, the user typed `Salad`. The code for this `SearchBar
 ...
 ```
 
-When the user ends editing his preferred food type, the `searchApi` function is called, which searchs the api for the term he typed.
+Cuando el/la usuario termina de editar su tipo de alimento preferido, la función `searchApi` es invocada, la cual busca el la api por el término escrito
 
 ### - **<ins>src/screens/ShowABusinessInfoScreen.js</ins>**
 
-It shows a screen with the main info of the locale that the user clicked on (by clicking on a business of one of the business stripes)
+Muestra una pantalla con la principal info del local, que el/la usuario seleccionó (haciendo click en un restaurant de una cinta de negocios)
 
 ```jsx
 // src/screens/ShowABusinessInfoScreen.js
@@ -812,7 +814,7 @@ It shows a screen with the main info of the locale that the user clicked on (by 
 ...
 ```
 
-It shows the images available, for the `screenheader` shows the name, and for the footer, it shows the text `Visit our Yelp Page`, the `rating` in the form of stars, the `address` and `location`:
+Muestra las imágenes disponibles, para el `screenheader` muestra el nombre, para el `screenfooter` muestra el texto `Visit our Yelp Page`, el `rating` en la forma de estrellas, la `dirección` y la `localidad`
 
 ```jsx
 // src/screens/ShowABusinessInfoScreen.js
@@ -845,17 +847,17 @@ It shows the images available, for the `screenheader` shows the name, and for th
   <img src="./imagesForReadme/Show-a-business-info.jpg" width="400" alt="Show-a-business-info"/>
 </p>
 
-If you click on `Visit our Yelp Page`, you'll go to the location's yelp web pata:
+Si hace click en `Visit our Yelp Page`, irá a la yelp page del negocio:
 
 <p align="center">
   <img src="./imagesForReadme/show yelp page.jpg" width="400" alt="show yelp page"/>
 </p>
 
-From here, you can visit the business web site, go to google map, etc..
+De aquí, puede visitar el website del negocio, ir a google maps, etc..
 
 ## - **<ins>App.js</ins>**
 
-This is what ensambles all toguether:
+Es lo que ensambla todo junto:
 
 ```jsx
 // App.js
@@ -877,7 +879,7 @@ This is what ensambles all toguether:
 ...
 ```
 
-It creates two screens in the form of Stack, it means, the only way to see them is by navigating to them by code. The default screen is `MainScreen`
+Crea dos pantallas en la formade Stack, lo que significa que la única forma de verlas es navegando a ellas por código. La pantalla por defecto es `MainScreen`
 
 <p align="center">
   <img src="./imagesForReadme/food-suggestions.jpg" width="400" alt="food-suggestions"/>
@@ -887,7 +889,7 @@ It creates two screens in the form of Stack, it means, the only way to see them 
 
 ### - **<ins>babel.config.js</ins>**
 
-It is used to configure the app with `Expo`, in this case, the app is being cached, the preset values are set, and the `.env` package was installed
+Es usado para configurar la app con `Expo`, en este caso, la app está siendo cacheada, los valores preset fueron colocados, y el paquete `.env` fue instalado.
 
 ```jsx
 // babel.config.js
@@ -914,4 +916,4 @@ module.exports = function (api) {
 
 ### - **<ins>ignoreWarnings.js</ins>**
 
-Is used to ignore certain warnings that appear in develop time.
+Es usado para ignorar ciertos warnings que aparecen en tiempo de desarrollo.

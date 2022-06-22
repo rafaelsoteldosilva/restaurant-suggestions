@@ -61,7 +61,7 @@ import yelp from "../api/yelp";
 //   }
 // }
 
-const ResultsShowScreen = ({ navigation, route }) => {
+const ShowABusinessInfoScreen = ({ navigation, route }) => {
    const [results, setResults] = useState(null);
    const { id } = route.params;
 
@@ -82,7 +82,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
       return (
          <View>
             <TouchableOpacity onPress={() => Linking.openURL(results.url)}>
-               <Text style={styles.url}>Visit our page</Text>
+               <Text style={styles.url}>Visit our Yelp Page</Text>
             </TouchableOpacity>
             <View style={{ flexDirection: "row", marginLeft: 5 }}>
                <StarRating
@@ -107,17 +107,19 @@ const ResultsShowScreen = ({ navigation, route }) => {
    if (!results) return null;
    else
       return (
-         <FlatList
-            style={{ flex: 1 }}
-            nestedScrollEnabled
-            data={results.photos}
-            keyExtractor={(photo) => photo}
-            ListHeaderComponent={screenHeader}
-            ListFooterComponent={screenFooter}
-            renderItem={({ item }) => {
-               return <Image style={styles.image} source={{ uri: item }} />;
-            }}
-         />
+         <SafeAreaView style={{ flex: 1 }}>
+            <FlatList
+               style={{ flex: 1 }}
+               nestedScrollEnabled
+               data={results.photos}
+               keyExtractor={(photo) => photo}
+               ListHeaderComponent={screenHeader}
+               ListFooterComponent={screenFooter}
+               renderItem={({ item }) => {
+                  return <Image style={styles.image} source={{ uri: item }} />;
+               }}
+            />
+         </SafeAreaView>
       );
 };
 
@@ -143,4 +145,4 @@ const styles = StyleSheet.create({
    },
 });
 
-export default ResultsShowScreen;
+export default ShowABusinessInfoScreen;

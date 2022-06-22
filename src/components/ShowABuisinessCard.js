@@ -12,7 +12,7 @@ import {
    ImageBackground,
 } from "react-native";
 
-const ResultsDetail = ({
+const ShowABuisinessCard = ({
    restName,
    restImage,
    restUrl,
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
    },
 });
 
-export default ResultsDetail;
+export default ShowABuisinessCard;
