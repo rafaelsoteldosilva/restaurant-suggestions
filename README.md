@@ -528,7 +528,7 @@ You see that for each of them you get things like:
 -  A phone number
 -  etc.
 
-Remember that $, $$, $$$, $$$$ are the level of prices. In this app I only used $, $$, $$$$
+Remember that `$`, `$$`, `$$$`, `$$$$` are the level of prices. In this app I only used `$`, `$$`, `$$$$`
 
 ## **components**
 
