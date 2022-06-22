@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/rafaelsoteldosilva/restaurants-suggestions/blob/main/README.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/rafaelsoteldosilva/restaurant-suggestions/blob/main/README.md)
 
 # **Restaurant suggestions in Santiago**
 
