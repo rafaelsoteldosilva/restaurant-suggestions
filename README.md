@@ -848,7 +848,7 @@ It shows the images available, for the `screenheader` shows the name, and for th
 If you click on `Visit our Yelp Page`, you'll go to the location's yelp web pata:
 
 <p align="center">
-  <img src="./imagesForReadme/show-yelp-page.jpg" width="400" alt="show-yelp-page"/>
+  <img src="./imagesForReadme/Show-yelp-page.jpg" width="400" alt="Show-yelp-page"/>
 </p>
 
 From here, you can visit the business web site, go to google map, etc..
